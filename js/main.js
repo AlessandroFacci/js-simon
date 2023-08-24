@@ -27,13 +27,14 @@ function countdown() {
   // calcolo il numero di secondi rimanenti
   let seconds = Math.floor((time % (60 * 1000)) / 1000);
   document.getElementById("seconds").innerHTML = seconds;
-}
 
-setInterval(() => {
-  countdown();
   // blocco il countdown a 0
   if (time <= 0) {
     clearTimeout(countdown);
     alert("Inizia la lezione");
   }
+}
+
+setInterval(() => {
+  countdown();
 }, 1000);
